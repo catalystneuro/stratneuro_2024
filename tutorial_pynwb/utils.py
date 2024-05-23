@@ -1,8 +1,4 @@
 from dandi.dandiapi import DandiAPIClient
-import fsspec
-import pynwb
-import h5py
-from fsspec.implementations.cached import CachingFileSystem
 import requests
 import os
 
@@ -40,7 +36,7 @@ def get_file_size_in_mb(file_path):
     except OSError as e:
         raise FileNotFoundError(f"Error: {e}")
 
-        
+
 # # Download the file you previously uploaded to DANDI archive
 # # Fill in the correct info for your file and api key
 # dandiset_id="213840",
